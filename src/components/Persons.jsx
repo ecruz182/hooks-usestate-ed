@@ -9,7 +9,7 @@ export const Persons = () => {
       id: 1,
       name: "Oscar Eduardo",
       role: "Frontend Developer",
-      img: "https://bootdey.com/img/Content/avatar/avatar6.png",
+      img: "https://bootdey.com/img/Content/avatar/avatar5.png",
     },
     {
       id: 2,
@@ -29,7 +29,8 @@ export const Persons = () => {
     <div>
       <h2>IT Team</h2>
       <div className='container d-flex justify-content-center '>
-        <div className='d-flex flex-row'>
+        <div >
+        <div class="row row-cols-1 row-cols-md-3 g-4">
           {persons.map((person) => {
             return (
               <div>
@@ -42,6 +43,7 @@ export const Persons = () => {
               </div>
             )
           })}
+        </div>
         </div>
       </div>
     </div>
