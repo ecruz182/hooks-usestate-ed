@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Person = ({name, role, img, handleEdit}) => {
+export const Person = ({id, name, role, img, handleEdit, handleDelete}) => {
   return (
       <div class="col">
         <div class="card text-bg-secondary">
@@ -9,9 +9,9 @@ export const Person = ({name, role, img, handleEdit}) => {
               <h5 className="card-title">{name}</h5>
               <p className="card-text">{role}</p>
             </div>
-            <div>
+            <div className='mb-4'>
               <button className='btn btn-success me-2' onClick={handleEdit}>Editar</button>
-              <button className='btn btn-danger'>Eliminar</button>
+              <button className="btn btn-danger" onClick={() => handleDelete(id)} data-bs-toggle="modal" data-bs-target="#deleteModal">Eliminar</button>
             </div>
         </div>
       </div>
